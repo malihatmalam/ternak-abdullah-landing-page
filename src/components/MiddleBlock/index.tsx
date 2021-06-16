@@ -1,9 +1,6 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
 import { ProductPicture } from "../../common/ProductPicture";
-import { Slide } from "react-awesome-reveal";
-import { Button } from "../../common/Button";
 import { MiddleBlockSection, Content, ContentWrapper, MinTitle,
   MinPara, } from "./styles";
 
