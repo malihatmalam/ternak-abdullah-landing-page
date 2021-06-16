@@ -44,15 +44,14 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
+  color: #117539;
   font-size: 14px;
   width: 70%;
 `;
 
 export const Large = styled(Link)<any>`
   font-size: 16px;
-  color: #000;
-  cursor: pointer;
+  color: #117539;
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
   line-height: 24px;
@@ -61,24 +60,24 @@ export const Large = styled(Link)<any>`
   transition: all 0.3s ease-in-out;
   max-width: max-content;
 
-  &:hover {
-    color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
-  }
+  // &:hover {
+  //   color: rgb(255, 130, 92);
+  //   text-underline-position: under;
+  //   text-decoration: rgb(255, 130, 92) wavy underline;
+  // }
 `;
 
 export const Chat = styled("p")`
-  color: #18216d;
+  color: #117539;
   max-width: fit-content;
-  border-bottom: 1px solid #18216d;
+  border-bottom: 1px solid #117539;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
+    border-bottom: 1px solid  #16C35B;
+    color: #16C35B;
   }
 `;
 
@@ -129,7 +128,7 @@ export const FooterContainer = styled("div")`
 export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
+  color: #117539;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;

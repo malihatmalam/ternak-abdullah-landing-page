@@ -11,16 +11,9 @@ const Router = () => {
       <Styles />
       <Header />
       <Switch>
-        {routes.map((routeItem) => {
-          return (
-            <Route
-              key={routeItem.component}
-              path={routeItem.path}
-              exact={routeItem.exact}
-              component={lazy(() => import(`../pages/${routeItem.component}`))}
-            />
-          );
-        })}
+        <Route exact path="/" component={lazy(() => import(`../pages/Home`))} />
+        <Route path="/product" component={lazy(() => import(`../pages/Product`))} />
+        <Route path="/about" component={lazy(() => import(`../pages/About`))} />
       </Switch>
       <Footer />
     </Suspense>
@@ -28,3 +21,15 @@ const Router = () => {
 };
 
 export default Router;
+
+
+// {routes.map((routeItem) => {
+      //     return (
+      //       <Route
+      //         key={routeItem.component}
+      //         path={routeItem.path}
+      //         exact={routeItem.exact}
+      //         component={lazy(() => import(`../pages/${routeItem.component}`))}
+      //       />
+      //     );
+      //   })}

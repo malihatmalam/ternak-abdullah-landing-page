@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MiddleBlockSection = styled("section")`
   position: relative;
-  padding: 7.5rem 0 3rem;
+  padding: 5.5rem 0 2rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -17,9 +17,23 @@ export const Content = styled("p")`
 `;
 
 export const ContentWrapper = styled("div")`
-  max-width: 570px;
+  max-width: 800px;
 
   @media only screen and (max-width: 768px) {
     max-width: 100%;
   }
+`;
+
+
+export const MinTitle = styled("h6")`
+  font-size: 15px;
+  line-height: 1rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  color: #000;
+  font-family: "Motiva Sans Light", sans-serif;
+`;
+
+export const MinPara = styled("p")`
+  font-size: 13px;
 `;

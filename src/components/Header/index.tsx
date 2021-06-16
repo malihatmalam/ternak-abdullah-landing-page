@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
+import { Link } from "react-router-dom";
 import {
   HeaderSection,
   LogoContainer,
@@ -13,7 +14,7 @@ import {
   CustomNavLinkSmall,
   Label,
   Outline,
-  Span,
+  Span
 } from "./styles";
 
 const Header = ({ t }: any) => {
@@ -28,30 +29,26 @@ const Header = ({ t }: any) => {
   };
 
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
+        <CustomNavLinkSmall>
+          <Link to="/">
+            <Span>{t("Beranda")}</Span>
+          </Link>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
+        <CustomNavLinkSmall>
+          <Link to="/product">
+            <Span>{t("Produk")}</Span>
+          </Link>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
+        <CustomNavLinkSmall>
+          <Link to="/about">
+            <Span>{t("Tentang")}</Span>
+          </Link>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
-        >
+        <CustomNavLinkSmall style={{ width: "180px" }}>
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button>{t("Kontak")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -63,7 +60,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="logoTernak.svg" width="101px" height="64px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />
@@ -91,3 +88,11 @@ const Header = ({ t }: any) => {
 };
 
 export default withTranslation()(Header);
+
+// const scrollTo = (id: string) => {
+//   const element = document.getElementById(id) as HTMLDivElement;
+//   element.scrollIntoView({
+//     behavior: "smooth",
+//   });
+//   setVisibility(false);
+// };
