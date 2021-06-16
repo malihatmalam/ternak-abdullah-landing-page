@@ -14,13 +14,11 @@ const Product = () => {
       <MiddleBlock
         title={PrimaryProduct.title}
         content={PrimaryProduct.text}
-        button={PrimaryProduct.button}
         section={PrimaryProduct.section}
       />
       <MiddleBlock
         title={SecondaryProduct.title}
         content={SecondaryProduct.text}
-        button={SecondaryProduct.button}
         section={SecondaryProduct.section}
       />
     </Container>

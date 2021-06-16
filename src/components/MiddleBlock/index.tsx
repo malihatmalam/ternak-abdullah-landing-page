@@ -10,12 +10,11 @@ import { MiddleBlockSection, Content, ContentWrapper, MinTitle,
 interface MiddleBlockProps {
   title: string;
   content: string;
-  button: string;
   section?: any;
   t: any;
 }
 
-const MiddleBlock = ({ title, content, button, t, section }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, content, t, section }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -41,11 +40,6 @@ const MiddleBlock = ({ title, content, button, t, section }: MiddleBlockProps) =
                       );
                     })}
               </Row>
-              {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
-              )}
             </Col>
           </ContentWrapper>
         </Row>
